@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validation Result</title>
+        <style>
+            /* Reset default browser styles */
+            body, h1, table {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            /* Style the body */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+            }
+
+            /* Style the header */
+            header {
+                background-color: #163a5f;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            /* Style the main section */
+            main {
+                margin: 20px auto;
+                max-width: 600px;
+            }
+            
+
+            footer {
+                background-color: #163a5f;
+                color: #fff;
+                text-align: center;
+                padding: 10px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+
+            /* Style the header */
+            h1, h2, h3, p {
+                text-align: center;
+                margin: 20px 0;
+            }
+    
+            /* Style the table */
+            table {
+                width: 80%;
+                margin: 0 auto;
+                border-collapse: collapse;
+                background-color: #fff;
+                border: 1px solid #ddd;
+            }
+    
+            /* Style table headings */
+            th {
+                background-color: #f2f2f2;
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+    
+            /* Style table cells */
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+    
+            /* Style alternating rows */
+            tbody tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        </style>
+     </head>
+    <body>
+        <header>
+            <img type="logo" src="static/GraphVerify.png" alt="GraphVerify Logo" style="width: 500px;/>
+        </header>
+        <main>
+            <section>
+                <h2>Validation Result</h2>
+            </section>
+            <section>
+                <h3>Validated File</h3>
+                <p>{{ filename }}</p>
+            </section>
+            <section>
+                <h3>Validation Time</h3>
+                <p>{{ validation_time }}</p>
+            </section>
+            <section>
+                <table id="Validation_error">
+                    <thead>
+                        <tr>
+                            <th class="first-colum">Error Number</th>
+                            <th class="second-colum">Validation Error</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for error in validation_result %}
+                        <tr>
+                            <td>{{ error[0] }}</td>
+                            <td>{{ error[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 DocVerify</p>
+        </footer>
+    </body>
+</html>
