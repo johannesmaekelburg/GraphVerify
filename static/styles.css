@@ -1,0 +1,85 @@
+/* styles.css */
+
+/* Reset default browser styles */
+body, h1, h2, form, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+}
+
+/* Style the header */
+header {
+    background-color: #163a5f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+}
+
+.logo {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 100px; /* Adjust the width of the image */
+}
+
+h1{
+    flex-grow: 1;
+    font-size: 5em;
+}
+
+/* Style the main section */
+main {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Style the form */
+form {
+    background-color: #205388;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+h2[type="Upload"]{
+    padding-bottom: 20px;
+    color: #e6e6e6;
+}
+
+/* Style the input field */
+input[type="file"] {
+    display: block;
+    margin-bottom: 0 auto 10px;
+    width: 40%; /* Set the width of the file input field */
+    margin: 0 auto 10px; /* Center-align the input field horizontally and add some bottom margin */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #0c2136;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto ;
+}
+
+/* Style the footer */
+footer {
+    background-color: #163a5f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

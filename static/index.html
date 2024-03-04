@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Upload Form</title>
+        <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1 type="title">Welcome to</h1> 
+            <img type="logo" src="static/GraphVerifySmall.png" alt="GraphVerify Logo" style="width: 500px;"/>
+        </header>
+        <main>
+            <section> 
+                <form action="/upload/" method="post" enctype="multipart/form-data">
+                    <h2 type="Upload">Choose the File you want to validate</h2>
+                    <input type="file" name="file">
+                    <input type="submit" value="Upload">
+                </form>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <p>&copy; 2024 DocVerify</p>
+    </footer>
+</html>
